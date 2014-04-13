@@ -1,6 +1,6 @@
 {
   "name": "gh-badges",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "GitHub badges implemented in SVG.",
   "keywords": ["GitHub", "badge", "SVG", "image"],
   "homepage": "http://b.adge.me",
