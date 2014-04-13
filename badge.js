@@ -29,8 +29,8 @@ function optimize(string, callback) {
 function makeImage(data, cb) {
    data.colorscheme = data.colorscheme.split(",");
   if (data.colorscheme) {
-    data.colorA = one.color(data.colorscheme[0]).hex();
-    data.colorB = one.color(data.colorscheme[data.colorscheme - 1]).hex();
+    data.colorA = color(data.colorscheme[0]).hex();
+    data.colorB = color(data.colorscheme[data.colorscheme - 1]).hex();
   }
   data.widths = [
     (canvasContext.measureText(data.text[0]).width|0) + 10,
