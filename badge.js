@@ -29,11 +29,11 @@ function optimize(string, callback) {
 function makeImage(data, cb) {
    data.colorscheme = data.colorscheme.split(",");
   if (data.colorscheme) {
-    data.colorA =  color.websafe(data.colorscheme[0]).toString();
+    data.colorA =  color.additive(data.colorscheme[0]).toString();
 	if(data.colorscheme.length > 1){
-		data.colorB =  color.websafe(data.colorscheme[1]).toString();
+		data.colorB =  color.additive(data.colorscheme[1]).toString();
 	}else{
-		data.colorB =  color.websafe(data.colorscheme[0]).toString();
+		data.colorB =  color.additive(data.colorscheme[0]).toString();
 	}
   }
   data.widths = [
