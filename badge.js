@@ -7,7 +7,7 @@ var Canvas = require('canvas');
 var canvasElement = new Canvas(0, 0);   // Width and height are irrelevant.
 var canvasContext = canvasElement.getContext('2d');
 var CanvasFont = Canvas.Font;
-var color = require('onecolor');
+var color = require('onecolor/one-color-all');
 try {
   var opensans = new CanvasFont('Verdana',
       path.join(__dirname, 'Verdana.ttf'));
