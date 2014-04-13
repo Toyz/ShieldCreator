@@ -30,7 +30,11 @@ function makeImage(data, cb) {
    data.colorscheme = data.colorscheme.split(",");
   if (data.colorscheme) {
     data.colorA =  color.websafe(data.colorscheme[0]).toString();
-    data.colorB =  color.websafe(data.colorscheme[data.colorscheme.length - 1]).toString();
+	if(data.colorscheme.length > 1){
+		data.colorB =  color.websafe(data.colorscheme[1]).toString();
+	}else{
+		data.colorB =  color.websafe(data.colorscheme[0]).toString();
+	}
   }
   data.widths = [
     (canvasContext.measureText(data.text[0]).width|0) + 10,
