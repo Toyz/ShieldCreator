@@ -36,6 +36,9 @@ function makeImage(data, cb) {
 		data.colorB =  color.hexString(color.getRgb(data.colorscheme[0]));
 	}
   }
+  if(data.font){
+	data.fontColor = color.hexString(color.getRgb(data.font));
+  }
   data.widths = [
     (canvasContext.measureText(data.text[0]).width|0) + 10,
     (canvasContext.measureText(data.text[1]).width|0) + 10,
