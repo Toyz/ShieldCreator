@@ -24,7 +24,8 @@
     "request": "~2.34.0",
     "redis": "~0.10.1",
     "camp": "~13.11.9",
-	"onecolor": "*"
+
+	"chromath": "*"
   },
   "devDependencies": {
     "ass": "~0.0.4",

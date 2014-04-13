@@ -7,7 +7,7 @@ var Canvas = require('canvas');
 var canvasElement = new Canvas(0, 0);   // Width and height are irrelevant.
 var canvasContext = canvasElement.getContext('2d');
 var CanvasFont = Canvas.Font;
-var color = require('onecolor/one-color-all');
+var color = require('chromath');
 try {
   var opensans = new CanvasFont('Verdana',
       path.join(__dirname, 'Verdana.ttf'));
@@ -29,8 +29,8 @@ function optimize(string, callback) {
 function makeImage(data, cb) {
    data.colorscheme = data.colorscheme.split(",");
   if (data.colorscheme) {
-    data.colorA = color(data.colorscheme[0]).hex();
-    data.colorB = color(data.colorscheme[data.colorscheme - 1]).hex();
+    data.colorA =  color.websafe(data.colorscheme[0]).toString();
+    data.colorB = color.websafe(data.colorscheme[data.colorscheme - 1]).toString();
   }
   data.widths = [
     (canvasContext.measureText(data.text[0]).width|0) + 10,
