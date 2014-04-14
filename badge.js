@@ -19,7 +19,7 @@ canvasContext.font = '11px Verdana, "DejaVu Sans"';
 var dot = require('dot');
 var colorscheme = require(path.join(__dirname, 'colorscheme.json'));
 var template = fs.readFileSync(path.join(__dirname, 'template.svg'));
-var imageTemplate = dot.template(''+template);
+var imageTemplate;
 
 function optimize(string, callback) {
   var svgo = new SVGO();
@@ -27,7 +27,9 @@ function optimize(string, callback) {
 }
 
 function makeImage(data, cb) {
+   imageTemplate = dot.template(''+(template || data.template));
    data.colorscheme = data.colorscheme.split(",");
+   data.image = data.image || undefined;
   if (data.colorscheme) {
     data.colorA =  color.hexString(color.getRgb(data.colorscheme[0]));
 	if(data.colorscheme.length > 1){
