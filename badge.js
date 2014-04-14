@@ -27,7 +27,7 @@ function optimize(string, callback) {
 }
 
 function makeImage(data, cb) {
-   imageTemplate = dot.template(''+(template || data.template));
+   imageTemplate = dot.template(''+(data.template || template));
    data.colorscheme = data.colorscheme.split(",");
    data.image = data.image || undefined;
   if (data.colorscheme) {
