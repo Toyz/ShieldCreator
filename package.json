@@ -5,7 +5,7 @@
   "keywords": ["GitHub", "badge", "SVG", "image"],
   "homepage": "http://b.adge.me",
   "bugs": {
-    "url": "https://github.com/espadrine/gh-badges/issues",
+    "url": "https://github.com/Toyz/ShieldCreator/issues",
     "email": "thaddee.tyl@gmail.com"
   },
   "license": "CC0",
@@ -13,7 +13,7 @@
   "main": "badge.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/espadrine/gh-badges"
+    "url": "https://github.com/Toyz/ShieldCreator"
   },
   "dependencies": {
     "dot": "~1.0.2",
@@ -31,9 +31,6 @@
     "ass": "~0.0.4",
     "should": "~3.0.0",
     "mocha": "~1.14.0"
-  },
-  "scripts": {
-    "test": "mocha -R spec test.js"
   },
   "bin": { "badge": "./gh-badge.js" },
   "files": [
