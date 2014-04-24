@@ -32,7 +32,6 @@
     "should": "~3.0.0",
     "mocha": "~1.14.0"
   },
-  "bin": { "badge": "./gh-badge.js" },
   "files": [
     "badge.js",
     "README.md",
